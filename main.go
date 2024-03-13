@@ -1,14 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
 func main() {
 	var input int
 	head := 1
 	button := 100
 	status := 1
-	answer := 23
 	fmt.Println("猜數字 請輸入一個0~100的數字")
+	rand.Seed(time.Now().UnixNano())
+	answer := rand.Intn(101)
 	//fmt.Scan(&input)
 	fmt.Println(&input)
 	for status > 0 {
